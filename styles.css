@@ -284,106 +284,28 @@ body {
     box-shadow: 0 10px 25px var(--shadow-color-hover);
 }
 
-/* Flag Animation */
-.flag-animation {
-    width: 300px;
-    height: 200px;
+/* PSA Logo */
+.psa-logo {
+    width: 350px;
+    height: 350px;
     position: relative;
-    animation: flagWave 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 
-.flag-stripe {
+.logo-image {
     width: 100%;
-    height: 33.33%;
-    position: absolute;
-}
-
-.flag-stripe.green {
-    background: var(--pakistan-green);
-    top: 0;
-}
-
-.flag-stripe.white {
-    background: var(--pakistan-white);
-    top: 33.33%;
-    border-top: 1px solid #E2E8F0;
-    border-bottom: 1px solid #E2E8F0;
-}
-
-.flag-stripe.green:nth-child(3) {
-    top: 66.66%;
-}
-
-.flag-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background: var(--pakistan-green);
+    height: 100%;
+    object-fit: contain;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(1, 65, 28, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.crescent {
-    width: 60px;
-    height: 60px;
-    background: var(--pakistan-white);
-    border-radius: 50%;
-    position: relative;
-}
-
-.crescent::before {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 15px;
-    width: 50px;
-    height: 50px;
-    background: var(--pakistan-green);
-    border-radius: 50%;
-}
-
-.star {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 16px solid var(--pakistan-white);
-    transform: rotate(35deg);
-}
-
-.star::before {
-    content: '';
-    position: absolute;
-    top: -9px;
-    left: -8px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 16px solid var(--pakistan-white);
-    transform: rotate(-70deg);
-}
-
-.star::after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: -8px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 16px solid var(--pakistan-white);
-    transform: rotate(-70deg);
+.logo-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(1, 65, 28, 0.4);
+    animation: glow 2s ease-in-out infinite;
 }
 
 /* Section Styles */
@@ -853,42 +775,10 @@ section {
         gap: 2rem;
     }
 
-    .flag-animation {
-        width: 250px;
-        height: 167px;
+    .psa-logo {
+        width: 280px;
+        height: 280px;
         margin: 0 auto;
-    }
-
-    .flag-circle {
-        width: 60px;
-        height: 60px;
-    }
-
-    .crescent {
-        width: 45px;
-        height: 45px;
-    }
-
-    .crescent::before {
-        width: 37px;
-        height: 37px;
-        top: 4px;
-        left: 11px;
-    }
-
-    .star {
-        top: 11px;
-        right: 11px;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-bottom: 12px solid var(--pakistan-white);
-    }
-
-    .star::before,
-    .star::after {
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-bottom: 12px solid var(--pakistan-white);
     }
 }
 

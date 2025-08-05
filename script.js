@@ -220,14 +220,15 @@ document.querySelectorAll('.btn-primary, .btn-secondary, .social-card, .event-ca
 
 // Add some fun interactive elements
 document.addEventListener('DOMContentLoaded', () => {
-    // Add click effect to flag
-    const flagAnimation = document.querySelector('.flag-animation');
-    if (flagAnimation) {
-        flagAnimation.addEventListener('click', () => {
-            flagAnimation.style.animation = 'flagWave 0.5s ease-in-out';
+    // Add click effect to PSA logo
+    const psaLogo = document.querySelector('.psa-logo');
+    if (psaLogo) {
+        psaLogo.addEventListener('click', () => {
+            psaLogo.style.animation = 'float 0.5s ease-in-out';
             setTimeout(() => {
-                flagAnimation.style.animation = 'flagWave 3s ease-in-out infinite';
+                psaLogo.style.animation = 'float 4s ease-in-out infinite';
             }, 500);
+            showNotification('🇵🇰 PSA - Building community through culture! 🇵🇰', 'success');
         });
     }
     
